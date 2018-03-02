@@ -207,7 +207,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -217,7 +217,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -264,6 +264,190 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/02/正则表达式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zcy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rookie Zcy">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/02/正则表达式/" itemprop="url">正则表达式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-02T10:06:45+08:00">
+                2018-03-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><p>正则表达式就是记录文本规则的代码</p>
+<p>标签（空格分隔）： python,</p>
+<hr>
+<h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><p>\: 将下一个字符标记为一个特殊字符</p>
+<pre><code>1. d # 普通字符
+2. \d # 0-9 正整数
+3. s # 普通字符
+4. \s # 空白符,比如\t,\n
+</code></pre><h2 id="定界符"><a href="#定界符" class="headerlink" title="定界符"></a>定界符</h2><p>^: 匹配输入字符串的开始位置<br>$: 匹配输入字符串的结束位置</p>
+<pre><code>1.正则: ^123.*123$ # 匹配123hello123
+</code></pre><p>\b: 匹配一个单词边界，也就是指单词和空格间的位置</p>
+<pre><code>1.teacher Li
+2.正则: er\b # 可以匹配出er
+</code></pre><p>\B: 匹配非单词边界</p>
+<pre><code>1.verb
+2.正则: er\B # 可以匹配出er
+</code></pre><h2 id="个数-次数"><a href="#个数-次数" class="headerlink" title="个数/次数"></a>个数/次数</h2><p>*: 匹配前面的子表达式零次或多次<br>+: 匹配前面的子表达式一次或多次<br>?: 匹配前面的子表达式零次或一次<br>{n}: n 是一个非负整数<br>{n,}: n 是一个非负整数<br>{n,m}: m 和 n 均为非负整数，其中n &lt;= m</p>
+<pre><code>1.heo helo hello helllo
+2.正则: hel*o # 可以匹配 heo helo hello helllo
+3.正则: hel+o # 可以匹配 helo hello helllo
+4.正则: hel?o # 可以匹配 heo helo
+5.正则: hel{3}o # 可以匹配 helllo
+6.正则: hel{1,}o # 可以匹配 helo hello helllo
+7.正则: hel{0,3}o # 可以匹配 heo helo hello helllo
+</code></pre><p>?: 当该字符紧跟在任何一个其他限制符 (*, +, ?, {n}, {n,}, {n,m}) 后面时，匹配模式是非贪婪的<br>    1.hel hell helll<br>    2.正则: hel+ # 可以匹配 hel hell helll<br>    3.正则: hel+? # 只会匹配 hel hell helll中的 hel部分</p>
+<p>.: 匹配除 “\n” 之外的任何单个字符</p>
+<pre><code>1.hello world python
+2.正则: .* # 可以匹配出所有单词
+</code></pre><p>x|y: 匹配 x 或 y<br>[xyz]: 字符集合</p>
+<pre><code>1.hello aello
+2.正则: a|hello # 匹配 hello 和 a
+3.正则: [a|h]ello # 匹配 hello 和 aello
+</code></pre><h2 id="范围"><a href="#范围" class="headerlink" title="范围"></a>范围</h2><p>[xyz]: 字符集合<br>[^xyz]: 字符集合取反<br>[a-z]: 字符范围<br>[^a-z]: 负值字符范围</p>
+<h2 id="空白符"><a href="#空白符" class="headerlink" title="空白符"></a>空白符</h2><p>\f: 匹配一个换页符<br>\n: 匹配一个换行符<br>\r: 匹配一个回车符<br>\t: 匹配一个制表符</p>
+<h2 id="语法糖"><a href="#语法糖" class="headerlink" title="语法糖"></a>语法糖</h2><p>\d: 匹配一个数字字符. 相当于 [0-9]<br>\D: 匹配一个非数字字符. 相当于 [^0-9]<br>\s: 匹配任何空白字符，包括空格、制表符、换页符等等. 相当于 [\f\n\t\r\v]<br>\S: 匹配任何非空白字符. 相当于 [^\f\n\t\r\v]<br>\w: 匹配字母、数字、下划线. 相当于 [A-Za-z0-9<em>]<br>\W: 匹配非字母、数字、下划线. 相当于 [^A-Za-z0-9</em>]</p>
+<h2 id="如何在python中使用正则表达式"><a href="#如何在python中使用正则表达式" class="headerlink" title="如何在python中使用正则表达式"></a>如何在python中使用正则表达式</h2><p><strong>re模块</strong></p>
+<h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3><pre><code>re.search
+import re
+test_string = &apos;hello&apos;
+result = re.search(&apos;l&apos;, test_string)
+print(result)
+</code></pre><h3 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果:"></a>运行结果:</h3><pre><code>[Running] python &quot;g:\phpStudy\WWW\test_py\.vscode\test.py&quot;
+&lt;_sre.SRE_Match object; span=(2, 3), match=&apos;l&apos;&gt;
+[Done] exited with code=0 in 0.116 seconds
+re.findall
+import re
+test_string = &apos;hello&apos;
+result = re.findall(&apos;l&apos;, test_string)
+print(result)
+</code></pre><h3 id="运行结果-1"><a href="#运行结果-1" class="headerlink" title="运行结果:"></a>运行结果:</h3><pre><code>[Running] python &quot;g:\phpStudy\WWW\test_py\.vscode\test.py&quot;
+[&apos;l&apos;, &apos;l&apos;]
+[Done] exited with code=0 in 0.11 seconds
+</code></pre><h3 id="替换"><a href="#替换" class="headerlink" title="替换"></a>替换</h3><pre><code>re.sub
+import re
+test_string = &apos;hello&apos;
+result = re.sub(&apos;l&apos;, &apos;m&apos;, test_string)
+print(result)
+</code></pre><h3 id="运行结果-2"><a href="#运行结果-2" class="headerlink" title="运行结果:"></a>运行结果:</h3><pre><code>[Running] python &quot;g:\phpStudy\WWW\test_py\.vscode\test.py&quot;
+hemmo
+[Done] exited with code=0 in 0.12 seconds
+</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <div>
+  
+  </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/17/搭建Hexo，以及多平台管理-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -293,7 +477,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-17T17:26:45+08:00">
                 2018-01-17
@@ -454,7 +638,7 @@ hexo deploy
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-17T16:14:46+08:00">
                 2018-01-17
@@ -628,7 +812,7 @@ hexo deploy
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-17T09:54:18+08:00">
                 2018-01-17
@@ -765,14 +949,23 @@ hexo deploy
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">posts</span>
               </a>
             </div>
           
 
           
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
           
 
         </nav>
@@ -827,7 +1020,7 @@ hexo deploy
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
