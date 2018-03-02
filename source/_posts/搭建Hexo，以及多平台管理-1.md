@@ -1,11 +1,9 @@
 ---
 title: 搭建Hexo，以及多平台管理
 date: 2018-01-17 17:26:45
-tags:
+tags: github
 ---
 # 搭建Hexo，以及多平台管理
-
-标签（空格分隔）： github
 
 ---
 
