@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="js," />
+
+
+
+
+  
+
+
+  <link rel="alternate" href="/atom.xml" title="Rookie Zcy" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="CSS选择器 什么是css选择器?一种快速定位元素的方法 为什么要学习css选择器?beautifulsoupscrapy css选择器的基本用法★☆☆☆☆*举例: *    解释: 选择所有元素 .class举例: .intro 解释: 选择所有class=&amp;quot;intro&amp;quot;的元素 #id举例: #firstname 解释: 选择所有id=&amp;quot;firstname&amp;quot">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS选择器">
+<meta property="og:url" content="http://yoursite.com/2018/03/02/CSS选择器/index.html">
+<meta property="og:site_name" content="Rookie Zcy">
+<meta property="og:description" content="CSS选择器 什么是css选择器?一种快速定位元素的方法 为什么要学习css选择器?beautifulsoupscrapy css选择器的基本用法★☆☆☆☆*举例: *    解释: 选择所有元素 .class举例: .intro 解释: 选择所有class=&amp;quot;intro&amp;quot;的元素 #id举例: #firstname 解释: 选择所有id=&amp;quot;firstname&amp;quot">
+<meta property="og:updated_time" content="2018-03-02T02:55:42.322Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS选择器">
+<meta name="twitter:description" content="CSS选择器 什么是css选择器?一种快速定位元素的方法 为什么要学习css选择器?beautifulsoupscrapy css选择器的基本用法★☆☆☆☆*举例: *    解释: 选择所有元素 .class举例: .intro 解释: 选择所有class=&amp;quot;intro&amp;quot;的元素 #id举例: #firstname 解释: 选择所有id=&amp;quot;firstname&amp;quot">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/03/02/CSS选择器/"/>
+
+
+
+
+
+  <title>CSS选择器 | Rookie Zcy</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Rookie Zcy</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/02/CSS选择器/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zcy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rookie Zcy">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">CSS选择器</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-02T10:30:52+08:00">
+                2018-03-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h1><hr>
+<h2 id="什么是css选择器"><a href="#什么是css选择器" class="headerlink" title="什么是css选择器?"></a>什么是css选择器?</h2><p>一种快速定位元素的方法</p>
+<h2 id="为什么要学习css选择器"><a href="#为什么要学习css选择器" class="headerlink" title="为什么要学习css选择器?"></a>为什么要学习css选择器?</h2><p>beautifulsoup<br>scrapy</p>
+<h2 id="css选择器的基本用法"><a href="#css选择器的基本用法" class="headerlink" title="css选择器的基本用法"></a>css选择器的基本用法</h2><h2 id="★☆☆☆☆"><a href="#★☆☆☆☆" class="headerlink" title="★☆☆☆☆"></a>★☆☆☆☆</h2><h3 id=""><a href="#" class="headerlink" title="*"></a>*</h3><p>举例: *<br>    解释: 选择所有元素</p>
+<h3 id="class"><a href="#class" class="headerlink" title=".class"></a>.class</h3><pre><code>举例: .intro
+解释: 选择所有class=&quot;intro&quot;的元素
+</code></pre><h3 id="id"><a href="#id" class="headerlink" title="#id"></a>#id</h3><pre><code>举例: #firstname
+解释: 选择所有id=&quot;firstname&quot;的元素
+</code></pre><h3 id="element"><a href="#element" class="headerlink" title="element"></a>element</h3><pre><code>举例: p
+解释: 选择所有`&lt;p&gt;`元素
+</code></pre><h3 id="not-selector"><a href="#not-selector" class="headerlink" title=":not(selector)"></a>:not(selector)</h3><pre><code>举例: :not(p)
+解释: 选择每个并非p元素的元素
+</code></pre><h2 id="★★☆☆☆"><a href="#★★☆☆☆" class="headerlink" title="★★☆☆☆"></a>★★☆☆☆</h2><h3 id="element-element"><a href="#element-element" class="headerlink" title="element,element"></a>element,element</h3><pre><code>举例: div,p
+解释: 选择所有`&lt;div&gt;`元素和`&lt;p&gt;`元素
+</code></pre><h3 id="element-element-1"><a href="#element-element-1" class="headerlink" title="element element"></a>element element</h3><pre><code>举例: div p
+解释: 选择`&lt;div&gt;`元素内的所有`&lt;p&gt;`元素(后代们)
+</code></pre><h3 id="element-gt-element"><a href="#element-gt-element" class="headerlink" title="element&gt;element"></a>element&gt;element</h3><p>举例: div&gt;p<br>解释: 选择所有父级是 <code>&lt;div&gt;</code> 元素的 <code>&lt;p&gt;</code> 元素(儿子们)</p>
+<h3 id="element1-element2"><a href="#element1-element2" class="headerlink" title="element1~element2"></a>element1~element2</h3><pre><code>举例: p~ul
+解释: 选择p元素之后的每一个ul元素(弟弟们)
+</code></pre><h3 id="element-element-2"><a href="#element-element-2" class="headerlink" title="element+element"></a>element+element</h3><pre><code>举例: div+p
+解释: 选择所有紧接着`&lt;div&gt;`元素之后的`&lt;p&gt;`元素(第一个弟弟)
+</code></pre><h2 id="★★★☆☆"><a href="#★★★☆☆" class="headerlink" title="★★★☆☆"></a>★★★☆☆</h2><h3 id="attribute"><a href="#attribute" class="headerlink" title="[attribute]"></a>[attribute]</h3><pre><code>举例: [target]
+解释: 选择所有带有target属性元素
+</code></pre><h3 id="attribute-value"><a href="#attribute-value" class="headerlink" title="[attribute=value]"></a>[attribute=value]</h3><pre><code>举例: [target=-blank]
+解释: 选择所有使用target=&quot;-blank&quot;的元素
+</code></pre><h3 id="attribute-value-1"><a href="#attribute-value-1" class="headerlink" title="[attribute^=value]"></a>[attribute^=value]</h3><pre><code>举例: a[href^=&quot;https&quot;]
+解释: 选择每一个href属性的值以&quot;https&quot;开头的元素
+</code></pre><h3 id="attribute-value-2"><a href="#attribute-value-2" class="headerlink" title="[attribute$=value]"></a>[attribute$=value]</h3><pre><code>举例: a[href$=&quot;.pdf&quot;]
+解释: 选择每一个href属性的值以&quot;.pdf&quot;结尾的元素
+</code></pre><h3 id="attribute-value-3"><a href="#attribute-value-3" class="headerlink" title="[attribute*=value]"></a>[attribute*=value]</h3><pre><code>举例: a[href*=&quot;runoob&quot;]
+解释: 选择每一个href属性的值包含子字符串&quot;runoob&quot;的元素
+</code></pre><h2 id="★★★★☆"><a href="#★★★★☆" class="headerlink" title="★★★★☆"></a>★★★★☆</h2><h3 id="first-child"><a href="#first-child" class="headerlink" title=":first-child"></a>:first-child</h3><pre><code>举例: p:first-child
+解释: 指定只有当`&lt;p&gt;`元素是其父级的第一个子级的样式。
+</code></pre><h3 id="first-of-type"><a href="#first-of-type" class="headerlink" title=":first-of-type"></a>:first-of-type</h3><pre><code>举例: p:first-of-type
+解释: 选择每个p元素是其父级的第一个p元素
+</code></pre><h3 id="last-of-type"><a href="#last-of-type" class="headerlink" title=":last-of-type"></a>:last-of-type</h3><pre><code>举例: p:last-of-type
+解释: 选择每个p元素是其父级的最后一个p元素
+</code></pre><h3 id="only-of-type"><a href="#only-of-type" class="headerlink" title=":only-of-type"></a>:only-of-type</h3><pre><code>举例: p:only-of-type
+解释: 选择每个p元素是其父级的唯一p元素
+</code></pre><h3 id="only-child"><a href="#only-child" class="headerlink" title=":only-child"></a>:only-child</h3><pre><code>举例: p:only-child
+解释: 选择每个p元素是其父级的唯一子元素
+</code></pre><h3 id="nth-child-n"><a href="#nth-child-n" class="headerlink" title=":nth-child(n)"></a>:nth-child(n)</h3><pre><code>举例: p:nth-child(2)
+解释: 选择每个p元素是其父级的第二个子元素
+</code></pre><h3 id="nth-last-child-n"><a href="#nth-last-child-n" class="headerlink" title=":nth-last-child(n)"></a>:nth-last-child(n)</h3><pre><code>举例: p:nth-last-child(2)
+解释: 选择每个p元素的是其父级的第二个子元素，从最后一个子项计数
+</code></pre><h3 id="nth-of-type-n"><a href="#nth-of-type-n" class="headerlink" title=":nth-of-type(n)"></a>:nth-of-type(n)</h3><pre><code>举例: p:nth-of-type(2)
+解释: 选择每个p元素是其父级的第二个p元素
+</code></pre><h3 id="nth-last-of-type-n"><a href="#nth-last-of-type-n" class="headerlink" title=":nth-last-of-type(n)"></a>:nth-last-of-type(n)</h3><pre><code>举例: p:nth-last-of-type(2)
+解释: 选择每个p元素的是其父级的第二个p元素，从最后一个子项计数
+</code></pre><h3 id="last-child"><a href="#last-child" class="headerlink" title=":last-child"></a>:last-child</h3><pre><code>举例: p:last-child
+解释: 选择每个p元素是其父级的最后一个子级。
+</code></pre><h3 id="empty"><a href="#empty" class="headerlink" title=":empty"></a>:empty</h3><pre><code>举例: p:empty
+解释: 选择每个没有任何子级的p元素（包括文本节点）
+</code></pre><h2 id="★★★★★"><a href="#★★★★★" class="headerlink" title="★★★★★"></a>★★★★★</h2><h3 id="element-class"><a href="#element-class" class="headerlink" title="element.class"></a>element.class</h3><pre><code>举例: p.hello
+解释: 所有class=&quot;hello&quot;的p标签
+</code></pre><h3 id="element-class-class"><a href="#element-class-class" class="headerlink" title="element.class.class"></a>element.class.class</h3><pre><code>举例: p.hello.world
+解释: 所有class=&quot;hello world&quot;的标签
+</code></pre><h3 id="element-class-element-class"><a href="#element-class-element-class" class="headerlink" title="element.class element.class"></a>element.class element.class</h3><pre><code>举例: p.hello p.world
+解释: 所有class=&quot;hello&quot;的p标签下的所有class=&quot;world&quot;的p标签
+</code></pre>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+  
+  </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/js/" rel="tag"># js</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/02/正则表达式/" rel="next" title="正则表达式">
+                <i class="fa fa-chevron-left"></i> 正则表达式
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="zcy" />
+          <p class="site-author-name" itemprop="name">zcy</p>
+           
+              <p class="site-description motion-element" itemprop="description">来自一个rockstar programmer的日常</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">Artikel</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">Tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS选择器"><span class="nav-number">1.</span> <span class="nav-text">CSS选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是css选择器"><span class="nav-number">1.1.</span> <span class="nav-text">什么是css选择器?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么要学习css选择器"><span class="nav-number">1.2.</span> <span class="nav-text">为什么要学习css选择器?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#css选择器的基本用法"><span class="nav-number">1.3.</span> <span class="nav-text">css选择器的基本用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#★☆☆☆☆"><span class="nav-number">1.4.</span> <span class="nav-text">★☆☆☆☆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#"><span class="nav-number">1.4.1.</span> <span class="nav-text">*</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#class"><span class="nav-number">1.4.2.</span> <span class="nav-text">.class</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#id"><span class="nav-number">1.4.3.</span> <span class="nav-text">#id</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#element"><span class="nav-number">1.4.4.</span> <span class="nav-text">element</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#not-selector"><span class="nav-number">1.4.5.</span> <span class="nav-text">:not(selector)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#★★☆☆☆"><span class="nav-number">1.5.</span> <span class="nav-text">★★☆☆☆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#element-element"><span class="nav-number">1.5.1.</span> <span class="nav-text">element,element</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#element-element-1"><span class="nav-number">1.5.2.</span> <span class="nav-text">element element</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#element-gt-element"><span class="nav-number">1.5.3.</span> <span class="nav-text">element&gt;element</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#element1-element2"><span class="nav-number">1.5.4.</span> <span class="nav-text">element1~element2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#element-element-2"><span class="nav-number">1.5.5.</span> <span class="nav-text">element+element</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#★★★☆☆"><span class="nav-number">1.6.</span> <span class="nav-text">★★★☆☆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#attribute"><span class="nav-number">1.6.1.</span> <span class="nav-text">[attribute]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#attribute-value"><span class="nav-number">1.6.2.</span> <span class="nav-text">[attribute=value]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#attribute-value-1"><span class="nav-number">1.6.3.</span> <span class="nav-text">[attribute^=value]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#attribute-value-2"><span class="nav-number">1.6.4.</span> <span class="nav-text">[attribute$=value]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#attribute-value-3"><span class="nav-number">1.6.5.</span> <span class="nav-text">[attribute*=value]</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#★★★★☆"><span class="nav-number">1.7.</span> <span class="nav-text">★★★★☆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#first-child"><span class="nav-number">1.7.1.</span> <span class="nav-text">:first-child</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#first-of-type"><span class="nav-number">1.7.2.</span> <span class="nav-text">:first-of-type</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#last-of-type"><span class="nav-number">1.7.3.</span> <span class="nav-text">:last-of-type</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#only-of-type"><span class="nav-number">1.7.4.</span> <span class="nav-text">:only-of-type</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#only-child"><span class="nav-number">1.7.5.</span> <span class="nav-text">:only-child</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nth-child-n"><span class="nav-number">1.7.6.</span> <span class="nav-text">:nth-child(n)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nth-last-child-n"><span class="nav-number">1.7.7.</span> <span class="nav-text">:nth-last-child(n)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nth-of-type-n"><span class="nav-number">1.7.8.</span> <span class="nav-text">:nth-of-type(n)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nth-last-of-type-n"><span class="nav-number">1.7.9.</span> <span class="nav-text">:nth-last-of-type(n)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#last-child"><span class="nav-number">1.7.10.</span> <span class="nav-text">:last-child</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#empty"><span class="nav-number">1.7.11.</span> <span class="nav-text">:empty</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#★★★★★"><span class="nav-number">1.8.</span> <span class="nav-text">★★★★★</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#element-class"><span class="nav-number">1.8.1.</span> <span class="nav-text">element.class</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#element-class-class"><span class="nav-number">1.8.2.</span> <span class="nav-text">element.class.class</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#element-class-element-class"><span class="nav-number">1.8.3.</span> <span class="nav-text">element.class element.class</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zcy</span>
+</div>
+
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <!-- 动态背景 -->
+<!--  -->
+
+<!-- 
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none; width: 20px ;height: 20px;"  ></canvas>
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+
+ -->
+
+</html>
+<!-- 页面点击小红心 -->
+<!-- <script type="text/javascript" src="/js/src/love.js"></script>
+ -->

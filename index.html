@@ -207,7 +207,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -217,7 +217,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -264,6 +264,189 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/02/CSS选择器/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zcy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rookie Zcy">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/02/CSS选择器/" itemprop="url">CSS选择器</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-02T10:30:52+08:00">
+                2018-03-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h1><hr>
+<h2 id="什么是css选择器"><a href="#什么是css选择器" class="headerlink" title="什么是css选择器?"></a>什么是css选择器?</h2><p>一种快速定位元素的方法</p>
+<h2 id="为什么要学习css选择器"><a href="#为什么要学习css选择器" class="headerlink" title="为什么要学习css选择器?"></a>为什么要学习css选择器?</h2><p>beautifulsoup<br>scrapy</p>
+<h2 id="css选择器的基本用法"><a href="#css选择器的基本用法" class="headerlink" title="css选择器的基本用法"></a>css选择器的基本用法</h2><h2 id="★☆☆☆☆"><a href="#★☆☆☆☆" class="headerlink" title="★☆☆☆☆"></a>★☆☆☆☆</h2><h3 id=""><a href="#" class="headerlink" title="*"></a>*</h3><p>举例: *<br>    解释: 选择所有元素</p>
+<h3 id="class"><a href="#class" class="headerlink" title=".class"></a>.class</h3><pre><code>举例: .intro
+解释: 选择所有class=&quot;intro&quot;的元素
+</code></pre><h3 id="id"><a href="#id" class="headerlink" title="#id"></a>#id</h3><pre><code>举例: #firstname
+解释: 选择所有id=&quot;firstname&quot;的元素
+</code></pre><h3 id="element"><a href="#element" class="headerlink" title="element"></a>element</h3><pre><code>举例: p
+解释: 选择所有`&lt;p&gt;`元素
+</code></pre><h3 id="not-selector"><a href="#not-selector" class="headerlink" title=":not(selector)"></a>:not(selector)</h3><pre><code>举例: :not(p)
+解释: 选择每个并非p元素的元素
+</code></pre><h2 id="★★☆☆☆"><a href="#★★☆☆☆" class="headerlink" title="★★☆☆☆"></a>★★☆☆☆</h2><h3 id="element-element"><a href="#element-element" class="headerlink" title="element,element"></a>element,element</h3><pre><code>举例: div,p
+解释: 选择所有`&lt;div&gt;`元素和`&lt;p&gt;`元素
+</code></pre><h3 id="element-element-1"><a href="#element-element-1" class="headerlink" title="element element"></a>element element</h3><pre><code>举例: div p
+解释: 选择`&lt;div&gt;`元素内的所有`&lt;p&gt;`元素(后代们)
+</code></pre><h3 id="element-gt-element"><a href="#element-gt-element" class="headerlink" title="element&gt;element"></a>element&gt;element</h3><p>举例: div&gt;p<br>解释: 选择所有父级是 <code>&lt;div&gt;</code> 元素的 <code>&lt;p&gt;</code> 元素(儿子们)</p>
+<h3 id="element1-element2"><a href="#element1-element2" class="headerlink" title="element1~element2"></a>element1~element2</h3><pre><code>举例: p~ul
+解释: 选择p元素之后的每一个ul元素(弟弟们)
+</code></pre><h3 id="element-element-2"><a href="#element-element-2" class="headerlink" title="element+element"></a>element+element</h3><pre><code>举例: div+p
+解释: 选择所有紧接着`&lt;div&gt;`元素之后的`&lt;p&gt;`元素(第一个弟弟)
+</code></pre><h2 id="★★★☆☆"><a href="#★★★☆☆" class="headerlink" title="★★★☆☆"></a>★★★☆☆</h2><h3 id="attribute"><a href="#attribute" class="headerlink" title="[attribute]"></a>[attribute]</h3><pre><code>举例: [target]
+解释: 选择所有带有target属性元素
+</code></pre><h3 id="attribute-value"><a href="#attribute-value" class="headerlink" title="[attribute=value]"></a>[attribute=value]</h3><pre><code>举例: [target=-blank]
+解释: 选择所有使用target=&quot;-blank&quot;的元素
+</code></pre><h3 id="attribute-value-1"><a href="#attribute-value-1" class="headerlink" title="[attribute^=value]"></a>[attribute^=value]</h3><pre><code>举例: a[href^=&quot;https&quot;]
+解释: 选择每一个href属性的值以&quot;https&quot;开头的元素
+</code></pre><h3 id="attribute-value-2"><a href="#attribute-value-2" class="headerlink" title="[attribute$=value]"></a>[attribute$=value]</h3><pre><code>举例: a[href$=&quot;.pdf&quot;]
+解释: 选择每一个href属性的值以&quot;.pdf&quot;结尾的元素
+</code></pre><h3 id="attribute-value-3"><a href="#attribute-value-3" class="headerlink" title="[attribute*=value]"></a>[attribute*=value]</h3><pre><code>举例: a[href*=&quot;runoob&quot;]
+解释: 选择每一个href属性的值包含子字符串&quot;runoob&quot;的元素
+</code></pre><h2 id="★★★★☆"><a href="#★★★★☆" class="headerlink" title="★★★★☆"></a>★★★★☆</h2><h3 id="first-child"><a href="#first-child" class="headerlink" title=":first-child"></a>:first-child</h3><pre><code>举例: p:first-child
+解释: 指定只有当`&lt;p&gt;`元素是其父级的第一个子级的样式。
+</code></pre><h3 id="first-of-type"><a href="#first-of-type" class="headerlink" title=":first-of-type"></a>:first-of-type</h3><pre><code>举例: p:first-of-type
+解释: 选择每个p元素是其父级的第一个p元素
+</code></pre><h3 id="last-of-type"><a href="#last-of-type" class="headerlink" title=":last-of-type"></a>:last-of-type</h3><pre><code>举例: p:last-of-type
+解释: 选择每个p元素是其父级的最后一个p元素
+</code></pre><h3 id="only-of-type"><a href="#only-of-type" class="headerlink" title=":only-of-type"></a>:only-of-type</h3><pre><code>举例: p:only-of-type
+解释: 选择每个p元素是其父级的唯一p元素
+</code></pre><h3 id="only-child"><a href="#only-child" class="headerlink" title=":only-child"></a>:only-child</h3><pre><code>举例: p:only-child
+解释: 选择每个p元素是其父级的唯一子元素
+</code></pre><h3 id="nth-child-n"><a href="#nth-child-n" class="headerlink" title=":nth-child(n)"></a>:nth-child(n)</h3><pre><code>举例: p:nth-child(2)
+解释: 选择每个p元素是其父级的第二个子元素
+</code></pre><h3 id="nth-last-child-n"><a href="#nth-last-child-n" class="headerlink" title=":nth-last-child(n)"></a>:nth-last-child(n)</h3><pre><code>举例: p:nth-last-child(2)
+解释: 选择每个p元素的是其父级的第二个子元素，从最后一个子项计数
+</code></pre><h3 id="nth-of-type-n"><a href="#nth-of-type-n" class="headerlink" title=":nth-of-type(n)"></a>:nth-of-type(n)</h3><pre><code>举例: p:nth-of-type(2)
+解释: 选择每个p元素是其父级的第二个p元素
+</code></pre><h3 id="nth-last-of-type-n"><a href="#nth-last-of-type-n" class="headerlink" title=":nth-last-of-type(n)"></a>:nth-last-of-type(n)</h3><pre><code>举例: p:nth-last-of-type(2)
+解释: 选择每个p元素的是其父级的第二个p元素，从最后一个子项计数
+</code></pre><h3 id="last-child"><a href="#last-child" class="headerlink" title=":last-child"></a>:last-child</h3><pre><code>举例: p:last-child
+解释: 选择每个p元素是其父级的最后一个子级。
+</code></pre><h3 id="empty"><a href="#empty" class="headerlink" title=":empty"></a>:empty</h3><pre><code>举例: p:empty
+解释: 选择每个没有任何子级的p元素（包括文本节点）
+</code></pre><h2 id="★★★★★"><a href="#★★★★★" class="headerlink" title="★★★★★"></a>★★★★★</h2><h3 id="element-class"><a href="#element-class" class="headerlink" title="element.class"></a>element.class</h3><pre><code>举例: p.hello
+解释: 所有class=&quot;hello&quot;的p标签
+</code></pre><h3 id="element-class-class"><a href="#element-class-class" class="headerlink" title="element.class.class"></a>element.class.class</h3><pre><code>举例: p.hello.world
+解释: 所有class=&quot;hello world&quot;的标签
+</code></pre><h3 id="element-class-element-class"><a href="#element-class-element-class" class="headerlink" title="element.class element.class"></a>element.class element.class</h3><pre><code>举例: p.hello p.world
+解释: 所有class=&quot;hello&quot;的p标签下的所有class=&quot;world&quot;的p标签
+</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <div>
+  
+  </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/02/正则表达式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -293,7 +476,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-02T10:06:45+08:00">
                 2018-03-02
@@ -336,7 +519,6 @@
         
           
             <h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><p>正则表达式就是记录文本规则的代码</p>
-<p>标签（空格分隔）： python,</p>
 <hr>
 <h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><p>\: 将下一个字符标记为一个特殊字符</p>
 <pre><code>1. d # 普通字符
@@ -477,7 +659,7 @@ hemmo
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-17T17:26:45+08:00">
                 2018-01-17
@@ -519,8 +701,7 @@ hemmo
       
         
           
-            <h1 id="搭建Hexo，以及多平台管理"><a href="#搭建Hexo，以及多平台管理" class="headerlink" title="搭建Hexo，以及多平台管理"></a>搭建Hexo，以及多平台管理</h1><p>标签（空格分隔）： github</p>
-<hr>
+            <h1 id="搭建Hexo，以及多平台管理"><a href="#搭建Hexo，以及多平台管理" class="headerlink" title="搭建Hexo，以及多平台管理"></a>搭建Hexo，以及多平台管理</h1><hr>
 <h3 id="背景："><a href="#背景：" class="headerlink" title="背景："></a>背景：</h3><p>之前都是通过github的redme.md来编写自己的博客，后来在与朋友的聊天中得知了通过hexo可以搭建漂亮的博客，搭建过程中也遇到了许多小问题。</p>
 <h3 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h3><h4 id="1-创建安装git以及创建github远程仓库（忽略）"><a href="#1-创建安装git以及创建github远程仓库（忽略）" class="headerlink" title="1.创建安装git以及创建github远程仓库（忽略）"></a>1.创建安装git以及创建github远程仓库（忽略）</h4><h4 id="2-安装nodejs"><a href="#2-安装nodejs" class="headerlink" title="2.安装nodejs"></a>2.安装nodejs</h4><h4 id="3-配置hexo"><a href="#3-配置hexo" class="headerlink" title="3.配置hexo"></a>3.配置hexo</h4><h5 id="3-1下载安装hexo"><a href="#3-1下载安装hexo" class="headerlink" title="3.1下载安装hexo"></a>3.1下载安装hexo</h5><pre><code>$ npm install -g hexo-cli
 </code></pre><h5 id="3-2若接下来使用hexo命令，出现以下错误"><a href="#3-2若接下来使用hexo命令，出现以下错误" class="headerlink" title="3.2若接下来使用hexo命令，出现以下错误"></a>3.2若接下来使用hexo命令，出现以下错误</h5><pre><code>ERROR Deployer not found : github
@@ -638,7 +819,7 @@ hexo deploy
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-17T16:14:46+08:00">
                 2018-01-17
@@ -680,9 +861,7 @@ hexo deploy
       
         
           
-            <hr>
-<p>title: Design Pattern<br>date: 2018-01-17 16:14:42</p>
-<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><p><strong>设计模式（Design Pattern）</strong>是一套呗反复使用的、多数人知晓的、经过分类编目的、代码设计经验的总结，使用设计模式是为了可重用代码、让代码更容易被他人理解并且保证代码可靠性。</p>
+            <h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><p><strong>设计模式（Design Pattern）</strong>是一套呗反复使用的、多数人知晓的、经过分类编目的、代码设计经验的总结，使用设计模式是为了可重用代码、让代码更容易被他人理解并且保证代码可靠性。</p>
 <h2 id="一、概况"><a href="#一、概况" class="headerlink" title="一、概况"></a>一、概况</h2><p>设计模式分为三大类：</p>
 <ol>
 <li><p>创建型模式（描述如何创建对象），共五种：工厂方法模式、抽象工厂模式、单例模式、建造者模式、原型模式。</p>
@@ -812,7 +991,7 @@ hexo deploy
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-17T09:54:18+08:00">
                 2018-01-17
@@ -949,8 +1128,8 @@ hexo deploy
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">4</span>
-                <span class="site-state-item-name">posts</span>
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
           
@@ -962,8 +1141,8 @@ hexo deploy
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">tags</span>
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">Tags</span>
               
             </div>
           
@@ -1020,7 +1199,7 @@ hexo deploy
 
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
